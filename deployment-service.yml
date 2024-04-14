@@ -20,7 +20,7 @@ spec:
         runAsNonRoot: true
         runAsUser: 1000
       containers:
-      - name: Server
+      - name: server
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
@@ -80,7 +80,7 @@ spec:
     spec:
       serviceAccountName: default
       containers:
-        - name: Server
+        - name: server
           image: prassinha13/checkoutservice:latest
           ports:
           - containerPort: 5050
@@ -142,7 +142,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/recommendationservice:latest
         ports:
         - containerPort: 8080
@@ -199,7 +199,7 @@ spec:
     spec:
       serviceAccountName: default
       containers:
-        - name: Server
+        - name: server
           image: prassinha13/frontend:latest
           ports:
           - containerPort: 8080
@@ -296,7 +296,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/paymentservice:latest
         ports:
         - containerPort: 50051
@@ -348,7 +348,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/productcatalogservice:latest
         ports:
         - containerPort: 3550
@@ -400,7 +400,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/cartservice:latest
         ports:
         - containerPort: 7070
@@ -495,7 +495,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/currencyservice:latest
         ports:
         - name: grpc
@@ -547,7 +547,7 @@ spec:
     spec:
       serviceAccountName: default
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/shippingservice:latest
         ports:
         - containerPort: 50051
@@ -653,7 +653,7 @@ spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
-      - name: Server
+      - name: server
         image: prassinha13/adservice:latest
         ports:
         - containerPort: 9555
